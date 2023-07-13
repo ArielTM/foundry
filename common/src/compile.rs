@@ -469,6 +469,7 @@ pub fn etherscan_project(metadata: &Metadata, target_path: impl AsRef<Path>) -> 
         .solc(solc)
         .ephemeral()
         .no_artifacts()
+        .allowed_path(sources_path)
         .build()?)
 }
 
